@@ -51,16 +51,16 @@ Three optimization methods:
 2. Gradient Penalty
    Interpolate point $\hat{x}$ between $x$ and $G(z)$, 使判别器相对这个插值点的梯度趋近于1，在训练目标中添加以下正则项来直接约束梯度。
 
-   $$
+$$
    (||\nabla_{\hat{x}}D(\hat{x})||_2-1)^2)
-   $$
+$$
 3. Spectral Normalization
 
    每次迭代时根据discriminator参数的最大奇异值对参数进行归一化
 
-   $$
+$$
    W_{norm}=\frac{W}{\sigma(W)}
-   $$
+$$
 
 # Conditional-GAN
 
